@@ -20,13 +20,13 @@ function Header() {
   return (
     <div className="flex w-screen justify-between items-center pr-10">
       <div className="w-[90px] h-[90px]">
-        <img src="logo1.png" alt="my logo" />
+        <img src="src/assets/logo1.png" alt="my logo" />
       </div>
       <div className="hidden md:flex gap-10 font-normal text-lg">
         {menu.map((item) => (
           <li
             key={item.id}
-            className="list-none cursor-pointer hover:underline"
+            className="list-none cursor-pointer hover:underline hover:text-my-green"
           >
             {item.name}
           </li>

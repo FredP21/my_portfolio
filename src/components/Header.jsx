@@ -6,11 +6,11 @@ function Header() {
     },
     {
       id: 2,
-      name: "SKILLS",
+      name: "PROJECTS",
     },
     {
       id: 3,
-      name: "PROJECTS",
+      name: "SKILLS",
     },
     {
       id: 4,
@@ -18,18 +18,19 @@ function Header() {
     },
   ];
   return (
-    <div className="flex w-screen justify-between items-center pr-10">
+    <div className="flex items-center fixed w-full justify-between pr-10 border-b-2 bg-white">
       <div className="w-[90px] h-[90px]">
         <img src="src/assets/logo1.png" alt="my logo" />
       </div>
-      <div className="hidden md:flex gap-10 font-normal text-lg">
+      <div className="flex gap-10 font-normal text-lg">
         {menu.map((item) => (
-          <li
+          <a
+            href="/#"
             key={item.id}
             className="list-none cursor-pointer hover:underline hover:text-my-green"
           >
             {item.name}
-          </li>
+          </a>
         ))}
       </div>
     </div>

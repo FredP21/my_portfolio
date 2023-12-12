@@ -18,11 +18,11 @@ function Header() {
     },
   ];
   return (
-    <div className="flex items-center fixed w-full justify-between pr-10 border-b-2 bg-white">
+    <div className="flex items-center fixed w-full md:justify-between md:pr-10 border-b-2 bg-white">
       <div className="w-[90px] h-[90px]">
         <img src="src/assets/logo1.png" alt="my logo" />
       </div>
-      <div className="flex gap-10 font-normal text-lg">
+      <div className="grid grid-cols-2 gap-5 m-auto md:flex md:gap-10 font-normal text-lg">
         {menu.map((item) => (
           <a
             href="/#"

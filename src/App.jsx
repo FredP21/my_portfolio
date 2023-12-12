@@ -5,6 +5,7 @@ import Intro from "./components/Intro";
 import ProfileImg from "./components/ProfileImg";
 import Projects from "./components/Projects";
 import Sidebar from "./components/Sidebar";
+import Skills from "./components/Skills";
 
 function App() {
   return (
@@ -16,6 +17,7 @@ function App() {
           <Intro />
           <About />
           <Projects />
+          <Skills />
         </div>
         <div className="hidden md:block">
           <ProfileImg />

@@ -24,7 +24,7 @@ function Projects() {
   ];
 
   return (
-    <div className="px-12 mt-10">
+    <div className=" px-2 md:px-8 mt-10">
       <div className="flex items-center">
         <div className="w-[20px] h-[7px] bg-my-green rounded-full" />
         <div className="w-full border-[1px] mx-4 mt-[-2px]" />
@@ -36,8 +36,9 @@ function Projects() {
         {projectList.map((project) => (
           <a
             href={project.url}
+            target="blank"
             key={project.id}
-            className="rounded-lg shadow-my-shadow flex flex-col justify-center items-center gap-5 md:h-[350px] lg:w-[40%] lg:hover:shadow-my-shadow hover:scale-110 transition-all ease-in-out"
+            className="rounded-lg shadow-my-shadow flex flex-col justify-center items-center gap-5 md:h-[350px] lg:w-[40%] hover:scale-110 transition-all ease-in-out"
           >
             <h2 className="font-medium text-[2vw] mt-3 underline">
               {project.title}
@@ -45,7 +46,7 @@ function Projects() {
             <img
               src={project.imgUrl}
               alt="Picture of differents project"
-              className=" w-[97%] h-40 object-cover"
+              className=" object-contain w-[97%] h-40 md:object-cover"
             />
             <p className="hidden md:block italic mb-3 px-5 text-gray-400">
               {project.desc}

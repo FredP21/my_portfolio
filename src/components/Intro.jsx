@@ -1,6 +1,6 @@
 function Intro() {
   return (
-    <div className="flex justify-center flex-col items-center">
+    <div className="flex justify-center flex-col items-center" id="intro">
       <div className="h-[160px] border-r-[1px]" />
       <div className="w-[5px] h-[5px] bg-my-green rounded-full" />
       <h2 className="mt-5 tracking-wider text-[2.5vw]">HELLO, MY NAME IS</h2>

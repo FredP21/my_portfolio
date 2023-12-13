@@ -12,7 +12,10 @@ import { SiExpress, SiVercel, SiNpm, SiMysql } from "react-icons/si";
 function Skills() {
   const isMobile = useMediaQuery("only screen and (max-width: 767px)");
   return (
-    <div className="px-2 md:px-8 mt-10">
+    <div
+      className="lg:h-screen px-2 mt-20 md:px-8 md:flex md:flex-col md:justify-around"
+      id="skills"
+    >
       <div className="flex items-center">
         <div className="w-[20px] h-[7px] bg-my-green rounded-full" />
         <div className="w-full border-[1px] mx-4" />

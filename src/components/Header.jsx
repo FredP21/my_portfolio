@@ -2,7 +2,7 @@ import { Link } from "react-scroll";
 
 function Header() {
   return (
-    <nav className="flex items-center fixed w-full md:justify-between md:pr-10 border-b-2 bg-white">
+    <nav className="flex items-center fixed w-full md:justify-between md:pr-10 border-b-2 bg-white z-10">
       <div className="w-[90px] h-[90px]">
         <img src="src/assets/logo1.png" alt="my logo" />
       </div>

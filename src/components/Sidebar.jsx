@@ -8,7 +8,7 @@ import {
 function Sidebar() {
   return (
     <div className="w-[90px] border-r-[1px] h-screen fixed flex flex-col justify-around items-center">
-      <h2 className="-rotate-90 tracking-[0.15em]">HOMEPAGE</h2>
+      <h2 className="-rotate-90 tracking-[0.15em]">PORTFOLIO</h2>
       <div className="flex flex-col gap-5 mb-10 text-xl">
         <a
           href="https://github.com/FredP21"

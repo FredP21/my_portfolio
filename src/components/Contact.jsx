@@ -19,12 +19,12 @@ function Contact() {
           You can contact me here !
         </h2>
         <div className="mt-12 md:grid grid-cols-2 w-full">
-          <div className="hidden md:block">
+          <div className="hidden md:flex justify-center items-center">
             <Player
               autoplay
               loop
               src={animationData}
-              style={{ height: "300px", width: "300px" }}
+              className="h-[150px] w-[150px] lg:h-[300px] lg:w-[300px]"
             />
           </div>
           <div className="grid col-span-1 w-full">

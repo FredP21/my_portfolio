@@ -1,3 +1,6 @@
+import { Player } from "@lottiefiles/react-lottie-player";
+import animationData from "../lotties/enveloppe.json";
+
 function Contact() {
   return (
     <div
@@ -16,7 +19,14 @@ function Contact() {
           You can contact me here !
         </h2>
         <div className="mt-12 md:grid grid-cols-2 w-full">
-          <div className="hidden md:block"></div>
+          <div className="hidden md:block">
+            <Player
+              autoplay
+              loop
+              src={animationData}
+              style={{ height: "300px", width: "300px" }}
+            />
+          </div>
           <div className="grid col-span-1 w-full">
             <form
               action="onS"
@@ -24,12 +34,16 @@ function Contact() {
             >
               <label htmlFor="name"> Name:</label>
               <input
+                id="name"
+                autoComplete="name"
                 type="text"
                 placeholder="Enter your name"
                 className="border-[1px] text-center w-full"
               />
               <label htmlFor="email">Email:</label>
               <input
+                id="email"
+                autoComplete="email"
                 type="text"
                 placeholder="Enter your email"
                 className=" border-[1px] text-center w-full"

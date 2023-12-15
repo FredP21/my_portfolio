@@ -1,7 +1,26 @@
 import { Player } from "@lottiefiles/react-lottie-player";
 import animationData from "../lotties/enveloppe.json";
+import emailjs from "@emailjs/browser";
+import { useRef } from "react";
 
 function Contact() {
+  const form = useRef();
+  const serviceId = import.meta.env.VITE_APP_SERVICE_ID;
+  const templateId = import.meta.env.VITE_APP_TEMPLATE_ID;
+  const publicKey = import.meta.env.VITE_APP_PUBLIC_KEY;
+  const handleSubmit = (e) => {
+    e.target.reset();
+    e.preventDefault();
+    alert("Your message was sent");
+    emailjs.sendForm(serviceId, templateId, form.current, publicKey).then(
+      (result) => {
+        console.log(result.text);
+      },
+      (error) => {
+        console.log(error.text);
+      }
+    );
+  };
   return (
     <div
       className="md:h-screen px-2 mt-10 md:px-8 md:flex md:flex-col md:justify-around"
@@ -29,7 +48,8 @@ function Contact() {
           </div>
           <div className="grid col-span-1 w-full">
             <form
-              action="onS"
+              ref={form}
+              onSubmit={handleSubmit}
               className=" flex flex-col justify-center gap-1 w-full"
             >
               <label htmlFor="name"> Name:</label>
@@ -44,7 +64,7 @@ function Contact() {
               <input
                 id="email"
                 autoComplete="email"
-                type="text"
+                type="email"
                 placeholder="Enter your email"
                 className=" border-[1px] text-center w-full"
               />
@@ -53,6 +73,7 @@ function Contact() {
                 className="border-[1px] resize-none text-center"
                 name="message"
                 id="message"
+                type="message"
                 cols="10"
                 rows="5"
                 placeholder="Enter your message here"

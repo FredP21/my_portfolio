@@ -22,7 +22,7 @@ function Intro() {
       <div className="h-[160px] border-r-[1px]" />
       <div className="w-[5px] h-[5px] bg-my-green rounded-full" />
       <h2 className="mt-5 tracking-wider text-[2.5vw]">HELLO, MY NAME IS</h2>
-      <h2 className="text-[5vw] font-bold tracking-widest mt-5">
+      <h2 className="text-[5vw] text-center font-bold tracking-widest mt-5">
         FREDERIC <br />
         PELLETIER
       </h2>

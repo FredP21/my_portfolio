@@ -14,7 +14,7 @@ function Contact() {
   const handleSubmit = (e) => {
     e.target.reset();
     e.preventDefault();
-    alert(traduction["fr"].alert);
+    alert(traduction[language].alert);
     emailjs.sendForm(serviceId, templateId, form.current, publicKey).then(
       (result) => {
         console.log(result.text);

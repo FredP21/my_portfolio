@@ -85,7 +85,7 @@ function Contact() {
                 required={true}
                 cols="10"
                 rows="5"
-                placeholder={traduction[language].placeHolderName}
+                placeholder={traduction[language].placeHolderMessage}
               />
               <button
                 type="submit"

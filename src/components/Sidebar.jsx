@@ -39,7 +39,7 @@ function Sidebar() {
         </a>
       </div>
       <button
-        className="font-medium rounded-[60%] shadow-my-shadow p-3 border-[1px] border-zinc-200"
+        className="font-medium rounded-full w-10 h-10 flex items-center justify-center shadow-my-shadow p-3 border-[1px] border-zinc-200"
         onClick={handleLanguage}
       >
         {language}

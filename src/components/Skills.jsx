@@ -29,13 +29,13 @@ function Skills() {
         <div className="flex flex-col gap-10 items-center">
           {theme === "light" ? (
             <img
-              src="src/assets/front-end-logo-black.webp"
+              src="/front-end-logo-black.webp"
               alt="logo to representing front-end skills"
               className="w-[50px] h-[50px] md:w-[100px] md:h-[100px]"
             />
           ) : (
             <img
-              src="src/assets/front-end-logo-white.webp"
+              src="/front-end-logo-white.webp"
               alt="logo to representing front-end skills"
               className="w-[50px] h-[50px] md:w-[100px] md:h-[100px]"
             />
@@ -69,13 +69,13 @@ function Skills() {
         <div className="flex flex-col gap-10 mt-10 md:mt-0 items-center">
           {theme === "light" ? (
             <img
-              src="src/assets/back-end.webp"
+              src="/back-end.webp"
               alt="logo to representing front-end skills"
               className="w-[50px] h-[50px] md:w-[100px] md:h-[100px]"
             />
           ) : (
             <img
-              src="src/assets/back-endW.webp"
+              src="/back-endW.webp"
               alt="logo to representing front-end skills"
               className="w-[50px] h-[50px] md:w-[100px] md:h-[100px]"
             />
@@ -105,13 +105,13 @@ function Skills() {
         <div className="flex flex-col gap-10 mt-10 md:mt-2 items-center">
           {theme === "light" ? (
             <img
-              src="src/assets/tools.webp"
+              src="/tools.webp"
               alt="logo to representing front-end skills"
               className="w-[50px] h-[50px] md:w-[100px] md:h-[100px]"
             />
           ) : (
             <img
-              src="src/assets/toolsW.webp"
+              src="/toolsW.webp"
               alt="logo to representing front-end skills"
               className="w-[50px] h-[50px] md:w-[100px] md:h-[100px]"
             />

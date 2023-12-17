@@ -1,9 +1,12 @@
 import { Link } from "react-scroll";
 import { useTheme } from "../context/ThemeContext";
 import { useEffect } from "react";
+import traduction from "../utils/traduction";
+import { useTheme1 } from "../context/LanguageContext";
 
 function Header() {
   const { theme, handleTheme } = useTheme();
+  const { language } = useTheme1();
 
   useEffect(() => {
     document.getElementById("root").classList.remove("dark", "light");
@@ -17,12 +20,12 @@ function Header() {
       <ul className="grid grid-cols-2 gap-5 m-auto md:flex md:gap-10 font-normal text-lg">
         <Link to="intro" spy={true} smooth={true} duration={500}>
           <li className="list-none cursor-pointer hover:underline hover:text-my-green">
-            HOME
+            {traduction[language].nameTitle2}
           </li>
         </Link>
         <Link to="projects" spy={true} smooth={true} duration={500}>
           <li className="list-none cursor-pointer hover:underline hover:text-my-green">
-            PROJECTS
+            {traduction[language].nameTitle}
           </li>
         </Link>
         <Link to="skills" spy={true} smooth={true} duration={500}>
@@ -37,7 +40,7 @@ function Header() {
         </Link>
       </ul>
       <label className="switch hidden md:block">
-        <input type="checkbox" onChange={handleTheme} />
+        <input type="checkbox" onChange={handleTheme} className="input" />
         <span className="slider"></span>
       </label>
     </nav>

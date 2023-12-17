@@ -1,7 +1,10 @@
+import { useTheme1 } from "../context/LanguageContext";
 import { useTheme } from "../context/ThemeContext";
+import traduction from "../utils/traduction";
 
 function Intro() {
   const { theme } = useTheme();
+  const { language } = useTheme1();
   const handleDownloadCV = () => {
     const pdfPath = "src/assets/CVFredP.pdf";
 
@@ -24,7 +27,9 @@ function Intro() {
     <div className="flex justify-center flex-col items-center" id="intro">
       <div className="h-[160px] border-r-[1px]" />
       <div className="w-[5px] h-[5px] bg-my-green rounded-full" />
-      <h2 className="mt-5 tracking-wider text-[2.5vw]">HELLO, MY NAME IS</h2>
+      <h2 className="mt-5 tracking-wider text-[2.5vw]">
+        {traduction[language].pres}
+      </h2>
       <h2 className="text-[5vw] text-center font-bold tracking-widest mt-5">
         FREDERIC <br />
         PELLETIER
@@ -38,7 +43,7 @@ function Intro() {
             : "button black font-medium text-lg mt-4"
         }
       >
-        Download My CV
+        {traduction[language].textButton}
         <span className="b1"></span>
         <span className="b2"></span>
         <span className="b3"></span>

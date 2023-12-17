@@ -5,11 +5,13 @@ import {
   BiLogoDiscordAlt,
 } from "react-icons/bi";
 import { Link } from "react-scroll";
+import { useTheme1 } from "../context/LanguageContext";
 
 function Sidebar() {
+  const { language, handleLanguage } = useTheme1();
   return (
     <div className="w-[50px] md:w-[90px] border-r-[1px] z-10 h-screen fixed flex flex-col justify-around items-center">
-      <h2 className="-rotate-90 tracking-[0.15em]">PORTFOLIO</h2>
+      <h2 className="-rotate-90 tracking-[0.15em] mt-12">PORTFOLIO</h2>
       <div className="flex flex-col gap-5 mb-10 text-xl">
         <a
           href="https://github.com/FredP21"
@@ -36,6 +38,12 @@ function Sidebar() {
           <BiLogoDiscordAlt className="cursor-pointer hover:scale-110 transition-all ease-in-out  hover:text-my-green" />
         </a>
       </div>
+      <button
+        className="font-medium rounded-[60%] shadow-my-shadow p-3 border-[1px] border-zinc-200"
+        onClick={handleLanguage}
+      >
+        {language}
+      </button>
     </div>
   );
 }

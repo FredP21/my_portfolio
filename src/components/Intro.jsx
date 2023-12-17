@@ -1,4 +1,7 @@
+import { useTheme } from "../context/ThemeContext";
+
 function Intro() {
+  const { theme } = useTheme();
   const handleDownloadCV = () => {
     const pdfPath = "src/assets/CVFredP.pdf";
 
@@ -29,9 +32,17 @@ function Intro() {
       <button
         type="button"
         onClick={handleDownloadCV}
-        className="button font-medium text-lg mt-4"
+        className={
+          theme === "light"
+            ? "button white font-medium text-lg mt-4"
+            : "button black font-medium text-lg mt-4"
+        }
       >
         Download My CV
+        <span className="b1"></span>
+        <span className="b2"></span>
+        <span className="b3"></span>
+        <span className="b4"></span>
       </button>
     </div>
   );

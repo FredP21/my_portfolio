@@ -1,46 +1,143 @@
 .button {
-  width: 10em;
-  position: relative;
-  height: 3.5em;
-  border: 3px ridge #008080;
   outline: none;
-  background-color: transparent;
-  color: gray;
-  transition: 1s;
-  border-radius: 0.3em;
-  font-size: 16px;
-  font-weight: bold;
+  border: none;
+  font-size: 17px;
+  padding: 1em 2em;
+  position: relative;
+  background: none;
+  cursor: pointer;
 }
 
-.button::after {
-  content: "";
+.button:active {
+  transform: scale(0.96);
+}
+
+.button span {
   position: absolute;
-  top: -10px;
-  left: 3%;
-  width: 95%;
-  height: 40%;
+  background: #008080;
   transition: 0.5s;
-  background-color: white;
-  transform-origin: center;
+  box-shadow: 3px 3px 20px #008080;
 }
 
-.button::before {
-  content: "";
-  transform-origin: center;
+.button span:nth-child(1) {
+  top: 0;
+  left: 0;
+  width: 3px;
+  height: 30%;
+}
+
+.button:hover span:nth-child(1) {
+  height: 100%;
+}
+
+.button span:nth-child(2) {
+  top: 0;
+  left: 0;
+  width: 15%;
+  height: 3px;
+}
+
+.button:hover span:nth-child(2) {
+  width: 100%;
+}
+
+.button span:nth-child(3) {
+  bottom: 0;
+  right: 0;
+  width: 3px;
+  height: 40%;
+}
+
+.button:hover span:nth-child(3) {
+  height: 100%;
+}
+
+.button span:nth-child(4) {
+  bottom: 0;
+  right: 0;
+  width: 15%;
+  height: 3px;
+}
+
+.button:hover span:nth-child(4) {
+  width: 100%;
+}
+
+/* The switch - the box around the slider */
+.switch {
+  font-size: 17px;
+  position: relative;
+  display: inline-block;
+  width: 3.5em;
+  height: 2em;
+}
+
+/* Hide default HTML checkbox */
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+/* The slider */
+.slider {
   position: absolute;
-  top: 80%;
-  left: 3%;
-  width: 95%;
-  height: 40%;
-  background-color: white;
-  transition: 0.5s;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border: 1px solid;
+  /* background-color: #223243; */
+  transition: 0.4s;
+  border-radius: 30px;
 }
 
-.button:hover::before,
-button:hover::after {
-  transform: scale(0);
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 1.4em;
+  width: 1.4em;
+  border-radius: 20px;
+  left: 0.3em;
+  bottom: 0.3em;
+  /* background-color: #223243; */
+  box-shadow: inset 2px -2px 0 1.8px #213547;
+  transition: 0.4s;
+  animation: anima1 0.3s linear;
 }
 
-.button:hover {
-  box-shadow: inset 0px 0px 25px #008080;
+@keyframes anima1 {
+  0% {
+    transform: translateX(1.5em);
+  }
+
+  80% {
+    transform: translateX(-0.3em);
+  }
+
+  100% {
+    transform: translateX(0em);
+  }
+}
+
+.switch input:checked + .slider:before {
+  background-color: whitesmoke;
+  box-shadow: none;
+  transform: translateX(1.5em);
+  animation: anima 0.3s linear;
+}
+
+@keyframes anima {
+  0% {
+    transform: translateX(0px);
+  }
+
+  80% {
+    transform: translateX(1.6em);
+  }
+
+  100% {
+    transform: translateX(1.4em);
+  }
 }

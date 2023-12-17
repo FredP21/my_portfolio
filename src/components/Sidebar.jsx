@@ -4,10 +4,11 @@ import {
   BiLogoGmail,
   BiLogoDiscordAlt,
 } from "react-icons/bi";
+import { Link } from "react-scroll";
 
 function Sidebar() {
   return (
-    <div className="w-[90px] border-r-[1px] h-screen fixed flex flex-col justify-around items-center">
+    <div className="w-[50px] md:w-[90px] border-r-[1px] z-10 h-screen fixed flex flex-col justify-around items-center">
       <h2 className="-rotate-90 tracking-[0.15em]">PORTFOLIO</h2>
       <div className="flex flex-col gap-5 mb-10 text-xl">
         <a
@@ -24,7 +25,9 @@ function Sidebar() {
         >
           <BiLogoLinkedinSquare className="cursor-pointer hover:scale-110 transition-all ease-in-out  hover:text-my-green" />
         </a>
-        <BiLogoGmail className="cursor-pointer hover:scale-110 transition-all ease-in-out  hover:text-my-green" />
+        <Link to="contact" spy={true} smooth={true} duration={500}>
+          <BiLogoGmail className="cursor-pointer hover:scale-110 transition-all ease-in-out  hover:text-my-green" />
+        </Link>
         <a
           href="https://discord.com/users/581398485719449613"
           target="_blank"

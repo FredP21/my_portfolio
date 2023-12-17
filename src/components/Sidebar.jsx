@@ -5,7 +5,6 @@ import {
   BiLogoDiscordAlt,
 } from "react-icons/bi";
 import { Link } from "react-scroll";
-import Translator from "./Translator";
 import { useTheme1 } from "../context/LanguageContext";
 
 function Sidebar() {

@@ -8,8 +8,10 @@ import {
   BiLogoSass,
 } from "react-icons/bi";
 import { SiExpress, SiVercel, SiNpm, SiMysql } from "react-icons/si";
+import { useTheme } from "../context/ThemeContext";
 
 function Skills() {
+  const { theme } = useTheme();
   const isMobile = useMediaQuery("only screen and (max-width: 767px)");
   return (
     <div
@@ -25,35 +27,35 @@ function Skills() {
       </div>
       <div className="md:flex justify-around mt-10">
         <div className="flex flex-col gap-10 items-center">
-          <img
-            src="src/assets/front-end-logo-black.png"
-            alt="logo to representing front-end skills"
-            className={isMobile ? "w-[50px] h-[50px]" : "w-[100px] h-[100px]"}
-          />
-          <div className="w-[100%] mb-5 flex md:flex-col md:gap-3 items-center  text-my-green lg:justify-around">
+          {theme === "light" ? (
+            <img
+              src="src/assets/front-end-logo-black.webp"
+              alt="logo to representing front-end skills"
+              className="w-[50px] h-[50px] md:w-[100px] md:h-[100px]"
+            />
+          ) : (
+            <img
+              src="src/assets/front-end-logo-white.webp"
+              alt="logo to representing front-end skills"
+              className="w-[50px] h-[50px] md:w-[100px] md:h-[100px]"
+            />
+          )}
+          <div className="w-[100%] mb-5 flex md:flex-col md:gap-3 items-center lg:justify-around">
             <div className=" w-[100%] flex justify-between items-center">
-              <BiLogoHtml5
-                className={isMobile ? "w-[30px] h-[30px]" : "w-[50px] h-[50px]"}
-              />
-              <p className="hidden lg:block text-gray-400">HTML 5</p>
+              <BiLogoHtml5 className="text-my-green w-[30px] h-[30px] md:w-[50px] md:h-[50px]" />
+              <p className="hidden lg:block">HTML 5</p>
             </div>
             <div className=" w-[100%] flex justify-between gap-5 items-center">
-              <BiLogoReact
-                className={isMobile ? "w-[30px] h-[30px]" : "w-[50px] h-[50px]"}
-              />
-              <p className="hidden lg:block text-gray-400">React.js</p>
+              <BiLogoReact className="text-my-green w-[30px] h-[30px] mdw-[50px] md:h-[50px]" />
+              <p className="hidden lg:block">React.js</p>
             </div>
             <div className=" w-[100%] flex justify-between items-center">
-              <BiLogoSass
-                className={isMobile ? "w-[30px] h-[30px]" : "w-[50px] h-[50px]"}
-              />
-              <p className="hidden lg:block text-gray-400">Sass</p>
+              <BiLogoSass className="text-my-green w-[30px] h-[30px] md:w-[50px] md:h-[50px]" />
+              <p className="hidden lg:block">Sass</p>
             </div>
             <div className=" w-[100%] flex justify-between items-center">
-              <BiLogoTailwindCss
-                className={isMobile ? "w-[30px] h-[30px]" : "w-[50px] h-[50px]"}
-              />
-              <p className="hidden lg:block text-gray-400">Tailwind</p>
+              <BiLogoTailwindCss className="text-my-green w-[30px] h-[30px] md:w-[50px] md:h-[50px]" />
+              <p className="hidden lg:block">Tailwind</p>
             </div>
           </div>
         </div>
@@ -65,31 +67,31 @@ function Skills() {
           />
         </div>
         <div className="flex flex-col gap-10 items-center">
-          <img
-            src="src/assets/back-end.png"
-            alt="logo to representing back-end skills"
-            className={
-              isMobile ? "w-[50px] h-[50px] mt-2" : "w-[100px] h-[100px]"
-            }
-          />
-          <div className="w-[100%] mb-5 flex md:justify-around md:flex-col items-center md:gap-10 text-my-green">
+          {theme === "light" ? (
+            <img
+              src="src/assets/back-end.webp"
+              alt="logo to representing front-end skills"
+              className="w-[50px] h-[50px] md:w-[100px] md:h-[100px]"
+            />
+          ) : (
+            <img
+              src="src/assets/back-endW.webp"
+              alt="logo to representing front-end skills"
+              className="w-[50px] h-[50px] md:w-[100px] md:h-[100px]"
+            />
+          )}
+          <div className="w-[100%] mb-5 flex md:justify-around md:flex-col items-center md:gap-10">
             <div className=" w-[100%] flex justify-between items-center">
-              <BiLogoNodejs
-                className={isMobile ? "w-[30px] h-[30px]" : "w-[50px] h-[50px]"}
-              />
-              <p className="hidden lg:block text-gray-400">Node.js</p>
+              <BiLogoNodejs className="text-my-green w-[30px] h-[30px] md:w-[50px] md:h-[50px]" />
+              <p className="hidden lg:block">Node.js</p>
             </div>
             <div className=" w-[100%] flex justify-between items-center gap-5">
-              <SiExpress
-                className={isMobile ? "w-[30px] h-[30px]" : "w-[50px] h-[50px]"}
-              />
-              <p className="hidden lg:block text-gray-400">Express.js</p>
+              <SiExpress className=" text-my-green w-[30px] h-[30px] md:w-[50px] md:h-[50px]" />
+              <p className="hidden lg:block">Express.js</p>
             </div>
             <div className=" w-[100%] flex justify-between items-center">
-              <SiMysql
-                className={isMobile ? "w-[30px] h-[30px]" : "w-[50px] h-[50px]"}
-              />
-              <p className="hidden lg:block text-gray-400">MySQL</p>
+              <SiMysql className="w-[30px] h-[30px] text-my-green md:w-[50px] md:h-[50px]" />
+              <p className="hidden lg:block">MySQL</p>
             </div>
           </div>
         </div>
@@ -101,31 +103,31 @@ function Skills() {
           />
         </div>
         <div className="flex flex-col gap-10 items-center">
-          <img
-            src="src/assets/tools.png"
-            alt="logo to representing tools I'm using"
-            className={
-              isMobile ? "w-[50px] h-[50px] mt-2" : "w-[100px] h-[100px]"
-            }
-          />
-          <div className="w-[100%] mb-5 flex md:justify-around md:flex-col items-center md:gap-10  text-my-green">
+          {theme === "light" ? (
+            <img
+              src="src/assets/tools.webp"
+              alt="logo to representing front-end skills"
+              className="w-[50px] h-[50px] md:w-[100px] md:h-[100px]"
+            />
+          ) : (
+            <img
+              src="src/assets/toolsW.webp"
+              alt="logo to representing front-end skills"
+              className="w-[50px] h-[50px] md:w-[100px] md:h-[100px]"
+            />
+          )}
+          <div className="w-[100%] mb-5 flex md:justify-around md:flex-col items-center md:gap-10">
             <div className=" w-[100%] flex justify-between gap-5 items-center">
-              <BiLogoGithub
-                className={isMobile ? "w-[30px] h-[30px]" : "w-[50px] h-[50px]"}
-              />
-              <p className="hidden lg:block text-gray-400">GitHub</p>
+              <BiLogoGithub className="w-[30px] h-[30px] text-my-green md:w-[50px] md:h-[50px]" />
+              <p className="hidden lg:block">GitHub</p>
             </div>
             <div className=" w-[100%] flex justify-between items-center">
-              <SiNpm
-                className={isMobile ? "w-[30px] h-[30px]" : "w-[50px] h-[50px]"}
-              />
-              <p className="hidden lg:block text-gray-400">NPM</p>
+              <SiNpm className="w-[30px] h-[30px] text-my-green md:w-[50px] md:h-[50px]" />
+              <p className="hidden lg:block">NPM</p>
             </div>
             <div className=" w-[100%] flex justify-between items-center">
-              <SiVercel
-                className={isMobile ? "w-[30px] h-[30px]" : "w-[50px] h-[50px]"}
-              />
-              <p className="hidden lg:block text-gray-400">Vercel</p>
+              <SiVercel className="w-[30px] h-[30px] text-my-green md:w-[50px] md:h-[50px]" />
+              <p className="hidden lg:block">Vercel</p>
             </div>
           </div>
         </div>

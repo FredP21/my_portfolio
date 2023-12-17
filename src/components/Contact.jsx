@@ -48,6 +48,7 @@ function Contact() {
           </div>
           <div className="grid col-span-1 w-full">
             <form
+              id="form"
               ref={form}
               onSubmit={handleSubmit}
               className=" flex flex-col justify-center gap-1 w-full"
@@ -58,6 +59,7 @@ function Contact() {
                 autoComplete="name"
                 type="text"
                 placeholder="Enter your name"
+                required={true}
                 className="border-[1px] text-center w-full"
               />
               <label htmlFor="email">Email:</label>
@@ -66,6 +68,7 @@ function Contact() {
                 autoComplete="email"
                 type="email"
                 placeholder="Enter your email"
+                required={true}
                 className=" border-[1px] text-center w-full"
               />
               <label htmlFor="message">Have you got feedbacks?</label>
@@ -74,6 +77,7 @@ function Contact() {
                 name="message"
                 id="message"
                 type="message"
+                required={true}
                 cols="10"
                 rows="5"
                 placeholder="Enter your message here"

@@ -1,7 +1,7 @@
 const traduction = {
   EN: {
     pres: "HELLO, MY NAME IS",
-    textButton: "Download my CV",
+    textButton: "Download my Resume",
     pres2: "I'm a Web Developer",
     desc: "As a passionate junior developer deeply immersed in the world of coding, driven by a fervent enthusiasm for software development. Eager to learn, adapt, and contribute within dynamic tech environments. I search to honing skills, embracing new technologies, and crafting innovative solutions.",
     nameTitle: "PROJECTS",
@@ -16,7 +16,7 @@ const traduction = {
     labelName: "Name",
     placeHolderName: "Enter your name",
     placeHolderEmail: "Enter your email",
-    labelMessage: "Have you got feedbacks?",
+    labelMessage: "Do you have feedbacks?",
     placeHolderMessage: "Enter your message here",
     buttonMessage: "Send your message",
     alert: "Your message was sent",

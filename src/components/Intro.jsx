@@ -6,7 +6,7 @@ function Intro() {
   const { theme } = useTheme();
   const { language } = useTheme1();
   const handleDownloadCV = () => {
-    const pdfPath = "src/assets/CVFredP.pdf";
+    const pdfPath = "/CVFredP.pdf";
 
     fetch(pdfPath)
       .then((response) => response.blob())
@@ -39,8 +39,8 @@ function Intro() {
         onClick={handleDownloadCV}
         className={
           theme === "light"
-            ? "button white font-medium text-lg mt-4"
-            : "button black font-medium text-lg mt-4"
+            ? "button white font-medium text-xl mt-4"
+            : "button black font-medium text-xl mt-4"
         }
       >
         {traduction[language].textButton}
